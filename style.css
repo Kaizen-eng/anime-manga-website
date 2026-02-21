@@ -180,12 +180,12 @@ body {
     }
 
     .panel.active {
-        height: 90vh;
+        height: 75vh;
         flex: none !important;
     }
 
     .panel h2 {
-        font-size: 20px;
+        font-size: 30px;
         text-align: center;
     }
 
@@ -200,5 +200,6 @@ body {
         font-size: 18px;
     }
 }
+
 
 
