@@ -177,28 +177,31 @@ body {
     }
 
     .panel {
-        height: 60vh;
+        height: 75vh;
         flex: none !important;
+        animation: none !important;
         transform: none !important;
     }
 
     .panel.active {
+        height: 90vh;
         flex: none !important;
-        height: 80vh;
     }
 
     .panel h2 {
-        font-size: 18px;
+        font-size: 20px;
+        text-align: center;
     }
 
     .panel a {
-        padding: 8px 18px;
-        font-size: 14px;
+        padding: 10px 20px;
+        font-size: 15px;
     }
 
     .music-toggle {
-        top: 15px;
-        right: 15px;
+        top: 12px;
+        right: 12px;
         font-size: 18px;
     }
 }
+
