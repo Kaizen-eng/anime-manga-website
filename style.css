@@ -164,3 +164,26 @@ body {
     z-index: 9999;
 }
 
+/* 📱 Mobile Responsive Layout */
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .panel {
+        height: 70vh;
+        flex: none;
+    }
+
+    .panel.active {
+        height: 90vh;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
