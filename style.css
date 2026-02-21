@@ -167,23 +167,38 @@ body {
 /* 📱 Mobile Responsive Layout */
 @media (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .container {
         flex-direction: column;
         height: auto;
     }
 
     .panel {
-        height: 70vh;
-        flex: none;
+        height: 60vh;
+        flex: none !important;
+        transform: none !important;
     }
 
     .panel.active {
-        height: 90vh;
+        flex: none !important;
+        height: 80vh;
     }
 
-    body {
-        overflow-x: hidden;
+    .panel h2 {
+        font-size: 18px;
+    }
+
+    .panel a {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .music-toggle {
+        top: 15px;
+        right: 15px;
+        font-size: 18px;
     }
 }
-
-
