@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.panel {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+/* Dark gradient overlay */
+.panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
+    transition: 0.5s;
+}
+
+/* Content styling */
+.panel h2 {
+    position: relative;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255,0,0,0.7);
+    z-index: 1;
+}
+
+.panel a {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid red;
+    border-radius: 30px;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+/* Button hover glow */
+.panel a:hover {
+    background: red;
+    box-shadow: 0 0 20px red;
+}
+
+/* Panel hover animation */
+.panel:hover {
+    flex: 2;
+    transform: scale(1.05);
+}
+
+/* Slight image zoom on hover */
+.panel:hover::before {
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.5));
+}
+
+.music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0,0,0,0.7);
+    border: 2px solid red;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.music-toggle:hover {
+    background: red;
+    box-shadow: 0 0 15px red;
+}
+
+.music-toggle.playing {
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 25px red;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px red; }
+    50% { box-shadow: 0 0 30px red; }
+    100% { box-shadow: 0 0 10px red; }
+}
+
+.panel {
+    transform: translateY(100%);
+    animation: slideUp 1s forwards;
+}
+
+.panel:nth-child(1) { animation-delay: 0.2s; }
+.panel:nth-child(2) { animation-delay: 0.4s; }
+.panel:nth-child(3) { animation-delay: 0.6s; }
+.panel:nth-child(4) { animation-delay: 0.8s; }
+.panel:nth-child(5) { animation-delay: 1s; }
+.panel:nth-child(6) { animation-delay: 1.2s; }
+
+@keyframes slideUp {
+    to { transform: translateY(0); }
+}
+
+.panel {
+    transform: translateY(100%);
+    animation: slideUp 1s forwards;
+}
+
+.panel:nth-child(1) { animation-delay: 0.2s; }
+.panel:nth-child(2) { animation-delay: 0.4s; }
+.panel:nth-child(3) { animation-delay: 0.6s; }
+.panel:nth-child(4) { animation-delay: 0.8s; }
+.panel:nth-child(5) { animation-delay: 1s; }
+.panel:nth-child(6) { animation-delay: 1.2s; }
+
+@keyframes slideUp {
+    to { transform: translateY(0); }
+}
+
+.panel:hover {
+    flex: 2;
+}
+
+.panel {
+    flex: 1;
+    transition: all 0.6s ease;
+}
+
+.panel.active {
+    flex: 3;
+}
+
+.cursor-glow {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(15px);
+    z-index: 9999;
+}
+
